@@ -1,0 +1,25 @@
+<view class="contain">
+  <view class="bind-view">
+    <view class="bind-view-title">绑 定</view>
+    <form bindsubmit="bind" class="bind-form">
+      <view class="form-view">
+        <text>昵 称：</text>
+        <input name="username" />
+      </view>
+
+      <view class="form-view">
+        <text>邮 箱：</text>
+        <input name="email" />
+      </view>
+
+      <view class="form-view">
+        <text>手 机：</text>
+        <input name="telephone" />
+      </view>
+
+      <view style="margin-top:20px;">
+        <button form-type="submit" style="width:100%;">绑定</button>
+      </view>
+    </form>
+  </view>
+</view>

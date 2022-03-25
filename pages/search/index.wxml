@@ -1,0 +1,85 @@
+<!--pages/search/index.wxml-->
+<view class="search-page">
+   <form bindsubmit='search'>
+    <view class='search-bar'>
+        <view class='search'>
+          <image class='search-image' src='/res/common/search.png'></image>
+          <input class='search-input' name="keyword" value='{{keywords}}'></input>
+        </view>
+        <button formType='submit'>搜索</button>
+    </view>
+  </form>
+  <scroll-view class="search-result" scroll-y="true">
+    <block wx:if="{{goods.length>0}}">
+      <view class="result-title">***** 商品 *****</view>
+      <block wx:for="{{goods}}" wx:key="*this" wx:for-item="good">
+        <view class="goods-item" bindtap="detail" data-id="{{good.id}}">
+          <view class="goods-item-image">
+            <image src="{{good.cover}}"></image>
+          </view>
+          <view class="goods-item-info">
+            <view class="good-item-title">
+              <view>{{good.name}}</view>
+            </view>
+            <view>规格：{{good.type}} / 型号：{{good.no}}</view>
+            <view>总数：{{good.total}}</view>
+            <view class="before-price">价格：<text>{{good.price}} EURO</text></view>
+            <view class="price">优惠价格：<text>{{good.dprice}} EURO</text></view>
+            <view class="good-item-bottom">
+              <view class="car-shop">
+                <image src="/res/common/gris.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{brand.length>0}}">
+      <view class="result-title">***** 品牌 *****</view>
+      <block wx:for="{{brand}}" wx:for-item="bd" wx:for-index="bid">
+        <block wx:if="{{bid%2==0}}">
+          <view class="brand-items"> 
+            <view class="brand-item" bindtap="brand" data-id="{{bd.id}}">
+              <view class="brand-cover"><image src="{{bd.cover}}"></image></view>
+              <view class="brand-name">{{bd.name}}</view>
+            </view>
+            <block wx:if="{{brand[bid+1]}}">
+              <view class="brand-item" bindtap="brand" data-id="{{brand[bid+1].id}}">
+                <view class="brand-cover"><image src="{{brand[bid+1].cover}}"></image></view>
+                <view class="brand-name">{{brand[bid+1].name}}</view>
+              </view>
+            </block>
+          </view>
+        </block>
+      </block>
+    </block>
+    <block wx:if="{{category.length>0}}">
+      <view class="result-title">***** 分类 *****</view>
+      <block wx:for="{{category}}" wx:for-item="ca" wx:for-index="cid">
+        <block wx:if="{{cid%2==0}}">
+          <view class="category-items"> 
+            <view class="category-item" bindtap="category" data-id="{{ca.id}}">
+            <view class="category-cover"><image src="{{ca.cover}}"></image></view>
+            <view class="category-name">{{ca.name}}</view>
+          </view>
+            <block wx:if="{{category[cid+1]}}">
+              <view class="category-item" bindtap="category" data-id="{{category[cid+1].id}}">
+                <view class="category-cover"><image src="{{category[cid+1].cover}}"></image></view>
+                <view class="category-name">{{category[cid+1].name}}</view>
+              </view>
+            </block>
+          </view>
+        </block>
+      </block>
+    </block>
+    <block wx:if="{{activity.length>0}}">
+      <view class="result-title">***** 活动 *****</view>
+      <block wx:for="{{activity}}" wx:for-item="ac">
+        <view class="activity-item" bindtap="activity" data-id="{{ac.id}}">
+          <view class="activity-cover"><image src="{{ac.cover}}"></image></view>
+          <view>{{ac.name}}</view>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+</view>

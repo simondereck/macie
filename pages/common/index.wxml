@@ -1,0 +1,10 @@
+<!--pages/common/index.wxml-->
+<template name="bottom">
+  <view>
+    <view class="bottom-title">
+      <text bindtap="about">关于我们</text>
+      <text>|</text>
+      <text bindtap="store">店面</text>
+    </view>
+  </view>
+</template>

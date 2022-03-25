@@ -1,0 +1,14 @@
+/* pages/common/about.wxss */
+.about-image{
+  padding: 4vw;
+}
+
+.about-image image{
+  mode:aspectFit;
+  width: 92vw;
+  height: 92vw;
+  border-radius: 2vw;
+}
+.about-description{
+  padding: 4vw;
+}

@@ -1,0 +1,7 @@
+<!--pages/common/about.wxml-->
+<view>
+  <block wx:if="{{about}}">
+    <view class="about-image"><image src="{{about.image}}"></image></view>
+    <view class="about-description">{{about.description}}</view>
+  </block>
+</view>

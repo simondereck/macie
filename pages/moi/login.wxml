@@ -1,0 +1,25 @@
+<!--pages/moi/login.wxml-->
+<view class="contain">
+  <view class="login-view">
+    <view class="login-view-title">登 陆</view>
+    <form bindsubmit="login">
+      <view class="form-view">
+        <text>用户名：</text>
+        <input name="email" placeholder="邮箱或电话" value="{{email}}"/>
+        
+      </view>
+      <view class="form-view">
+        <text>密 码：</text>
+        <input name="password" type="password" value="{{password}}"/>
+      </view>
+      <view class="forgot" bindtap="forgot">忘记密码？</view>
+      <view class="login-form">
+        <button form-type="submit" style="width:100%;">确定登陆</button>
+      </view>
+    </form>
+  </view>
+  <view class="button-groups">
+    <view class="singup" bindtap="wechatlogin">微信登录</view>
+    <view class="singup" bindtap="singup">注册新用户</view>
+  </view>
+</view>

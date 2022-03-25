@@ -1,0 +1,11 @@
+<view>
+  <block wx:if="{{stores}}">
+    <block wx:for="{{stores}}" wx:key="*this" wx:for-item="store">
+      <view class="store-item">
+        <view>{{store.name}}</view>
+        <view>{{store.address}}</view>
+        <view>{{store.description}}</view>
+      </view>
+    </block>
+  </block>
+</view>

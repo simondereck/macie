@@ -1,0 +1,41 @@
+/* pages/address/create.wxss */
+
+.contain{
+  background: #f5f5f5;
+  width: 96vw;
+  padding: 2vw;
+}
+
+.address-from{
+  background: white;
+  width: 92vw;
+  padding: 3vw;
+}
+
+.address-item{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.address-item input{
+  border: 1px solid #f5f5f5;
+  padding: 2vw;
+}
+
+.address-from button{
+  background: #E6007D;
+  color: white;
+  width: 100%;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.check{
+  font-size: 4vw;
+}
+
+.address-title{
+  padding: 4vw;
+  background: #E6007D;
+  color: white;
+}

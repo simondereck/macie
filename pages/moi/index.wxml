@@ -1,0 +1,99 @@
+<view class='container'>
+ <view class='usercard'>
+    <view class='userinfo'>
+      <view class="userimage">
+           <open-data type="userAvatarUrl" ></open-data>
+      </view>
+      <view class='nameinfo'>
+        <open-data type="userNickName"></open-data>
+        <view wx:if="{{userinfo}}">
+          <text class='username'>用戶名:{{userinfo.username}}</text>
+        </view>
+        <view wx:else>
+          <text class='username'>用戶名:您还没有登陆</text>
+          <text class='username' bindtap='login'>点击登陆</text>
+        </view>
+      </view>
+      <view class='userbutton'><image bindtap='logout' src='/res/common/gear.png'></image></view>
+    </view>
+    <view class='subview' wx:if="{{logined}}">
+        <view class='subview-item' bindtap='likes'>
+        <text>{{totals.wishlist}}</text>
+        <text>关注的商品</text>
+      </view>
+      <view class='subview-item' bindtap='myscore'>
+        <text>{{totals.rewardpoints}}</text>
+        <text>我的积分</text>
+      </view>
+      <view class='subview-item' bindtap='myaddress'>
+        <text>{{totals.viewed_product}}</text>
+        <text>地址簿</text>
+      </view>
+    </view>
+    <view class="subview" wx:else>
+      <view class='subview-item' bindtap="likes">
+        <text>关注的商品</text>
+      </view>
+      <view class='subview-item' >
+        <text>我的积分</text>
+      </view>
+      <view class='subview-item' bindtap="myaddress"> 
+        <text>地址簿</text>
+      </view>
+    </view>
+  </view>
+  <view class='myorder'>
+    <view class='orderlist' bindtap='orderlist'>
+      <view class='orderlist-item'>  
+        <image src='/res/moi/list.png'></image>
+        <text>我的订单</text>
+      </view>
+      <view class='orderlist-item'>
+        <text>查看全部订单</text>
+        <image src='/res/moi/next.png'></image>
+      </view>
+    </view>
+    <view class="myorderinfo">
+      <view class='myorderinfo-item' bindtap='orderUnPay'>
+        <image src='/res/moi/card-select.png'></image>
+        <text>待付款</text>
+      </view>
+      <view class='myorderinfo-item' bindtap='orderUncheck'>
+        <image src='/res/moi/box-select.png'></image>
+        <text>待收货</text>
+      </view>
+      <view class='myorderinfo-item'  bindtap='logistics'>
+        <image src='/res/moi/car-select.png'></image>
+        <text>物流查询</text>
+      </view>
+    </view>
+  </view>
+  <view class='ads'>
+    <view class='ads-list'>
+      <view class='ads-item'>
+        <image src='/res/moi/paymethod.png'></image>
+        <text>微信支付</text>
+      </view>
+      <view class='ads-item'>
+        <image src='/res/moi/euro.png'></image>
+        <text>欧盟标准</text>
+      </view>
+    </view>
+    <view class='ads-list'>
+      <view class='ads-item' bindtap='call' data-phone='0148742106'>
+        <image src='/res/moi/phone.png'></image>
+        <text>客服电话 01 48 74 21 06</text>
+      </view>
+    </view>
+    <view class='ads-list'>
+      <view class='ads-item'>
+        <image src='/res/moi/grantee.png'></image>
+        <text>售后服务</text>
+      </view>
+      <view class='ads-item'>
+        <image src='/res/moi/airplane.png'></image>
+        <text>可门自取,可邮递</text>
+      </view>
+    </view>
+  </view>
+</view>

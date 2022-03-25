@@ -1,0 +1,9 @@
+/* pages/common/index.wxss */
+
+.bottom-title{
+  width: 90vw;
+  padding: 5vw;
+  display: flex;
+  justify-content: space-around;
+}
+

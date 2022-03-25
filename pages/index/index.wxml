@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<import src='/pages/common/index.wxml' />
+
+<view class="container">
+ <view class='search_main_search'>
+    <view class="df_search_main_arr" bindtap='search'>
+        <image class="search_main_logo" src='/res/common/search_logo.png' ></image>
+        <view class='search_main_line'></view>
+        <image class='search_main_icon' src='/res/common/search.png'></image>
+        <input class="search_main_input" disabled placeholder="搜索商品/品牌" />
+      </view>
+  </view>
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{swipers}}" wx:key="*this" wx:for-item="item" wx:for-index="index">
+        <swiper-item>
+          <image src="{{item.cover}}" mode="aspectFit" class="slide-image" width="100%" bindtap="swiperClick" data-id="{{index}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="category">
+    <block wx:for="{{category}}" wx:key="*those" wx:for-item="cate">
+      <view class="category-item" bindtap="categoryTap" data-category="{{cate.id}}">
+        <image src="{{cate.cover}}"></image>
+        <div>{{cate.name}}</div>
+      </view>
+    </block>
+  </view>
+  <!-- <view class="activity">
+    <block wx:for="{{activities}}" wx:key="*ac" wx:for-item="ac">
+      <view class="activity-item"
+      data-id="{{ac.id}}" bindtap="activity">
+        <image src="{{ac.cover}}"></image>
+      </view>
+    </block>
+  </view> -->
+  <view class="items">
+    <block wx:for="{{items}}" wx:key="*it" wx:for-item="item">
+      <view class="item">
+        <view class="brand-name">
+          <text class="title">{{item.name}}</text>
+          <text class="more" bindtap="brandDetail" data-id="{{item.id}}">查看更多 > </text>
+        </view>
+        <scroll-view scroll-x="true" class="scroll-good">
+          <block wx:for="{{item.goods}}" wx:key="*tm" wx:for-item="tem">
+            <view class="good" bindtap="goodDetail" data-id="{{tem.id}}">
+              <view class="good-image">
+                <image src="{{tem.cover}}"  mode="aspectFit"></image>
+              </view>
+              <view class="good-name">{{tem.name}}</view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </block>
+  </view>
+  <template is="bottom" ></template>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/address/index.wxml-->
+<view class="contain">
+  <view class="default-address">
+    <view class="address-title">
+      <view class="title">默认地址：</view>
+      <!-- <block wx:if="{{orid}}">
+        <view class="select"><radio bindtap="selectAddress" data-id=""></radio></view>
+      </block> -->
+    </view>
+    <block wx:if="{{default}}">
+      <view>{{default.address}}</view>
+      <view>{{default.ville}} | {{default.postcode}} | {{default.country}}</view>
+    </block>
+    <block wx:else>
+      <view>没有默认地址，请先添加</view>
+    </block>
+  </view>
+  <scroll-view class="address-contain" scroll-y="true">
+    <block wx:if="{{addresses.length>0}}">
+      <block wx:for="{{addresses}}" wx:key="*this" wx:for-item="item">
+        <view class="address">
+          <block wx:if="{{orid}}">
+            <view class="select"><radio bindtap="selectAddress" data-id="{{item.id}}"></radio></view>
+          </block>
+          <view>{{item.address}}</view>
+          <view>{{item.ville}} | {{item.postcode}}</view>
+          <view>{{item.country}}</view>
+          <block wx:if="{{item.default}}">
+            <view class="address-default">默认地址</view>
+          </block>
+          <block wx:else>
+            <view class="address-button">
+              <text class="delete" bindtap="delete" data-id="{{item.id}}">删 除</text> 
+              <text>|</text> 
+              <text class="set" bindtap="set" data-id="{{item.id}}">设置为默认地址</text>
+            </view>
+          </block>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+</view>
+
+<view class="add-new" hover-class="add-new-click" bindtap="createAddress">+</view>

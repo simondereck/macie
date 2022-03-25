@@ -1,0 +1,174 @@
+ @import '/pages/common/index.wxss';
+
+.container{
+  width: 100%;
+  height: 100vh;
+}
+
+
+.top_bar {
+  width: 100vw;
+  height: 10vh;
+}
+
+.top_bar image{
+  mode: aspectFill;
+  width: 100vw;
+  height: 10vh;
+}
+
+swiper{
+  background: rgba(255, 255, 255, 0.8);
+  height: 35vh;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+swiper-item{
+  height: 35vh;
+  width: 92vw;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+swiper-item image{
+  width: 92vw;
+  height: 100%;
+}
+
+.category{
+  display: flex;
+  justify-content: space-around;
+  background-color:white;
+  margin-bottom: 2vw;
+  padding: 2vw 0 2vw;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.category-item{
+  width: 15vw;
+  height: 20vw;
+  text-align: center;
+  color: black;
+}
+
+.category-item image{
+  width: 12vw;
+  height: 12vw;
+  mode: aspectFill;
+  border-radius: 12vw;
+}
+
+
+.activity{
+  width: 100%;
+}
+
+.activity-item{
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 20px;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.activity-item image{
+  width: 100%;
+  height: 70vh;
+  mode: aspectFill;
+}
+
+
+.search_main_search{
+  height: 10vw;
+  padding: 1vw;
+  position: fixed;
+  width: 70vw;
+  left: 13vw;
+  z-index: 1000;
+}
+
+.df_search_main_arr{
+  height: 8vw;
+  display: flex;
+  border-radius: 6vw;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  justify-content: right;
+  align-items: center;
+}
+.search_main_icon{
+  width: 6vw;
+  height: 6vw;
+}
+.search_main_logo{
+  width: 6vw;
+  height: 6vw;
+  margin: 2vw;
+}
+.search_main_line{
+  height: 6vw;
+  width: 1px;
+  border-left: 1px solid whitesmoke;
+  margin-left: 2px;
+}
+
+.search_main_input{
+  font-size: 4vw;
+  margin-left: 2vw;
+}
+
+.item{
+  margin-bottom: 2vw;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.scroll-good{
+  width: 100%;
+  height: 50vw;
+  white-space: nowrap;
+}
+.brand-name{
+  padding: 20px;
+  font-size: 4vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.brand-name .title{
+  margin-left: 7vw;
+  padding-bottom: 1vw;
+  border-bottom: 2px solid black;
+}
+
+.brand-name .more{
+  padding-bottom: 1vw;
+  font-size: 2.5vw;
+  color: gray;
+}
+
+
+
+.good{
+  width: 40vw;
+  height: 50vw;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.good-image,.good-image image{
+  width: 40vw;
+  height: 40vw;
+}
+
+.good-name{
+  height: 10vw;
+  width: 40vw;
+  font-size: 2.5vw;
+  line-height: 10vw;
+  line-break: anywhere;
+  overflow: hidden;
+}

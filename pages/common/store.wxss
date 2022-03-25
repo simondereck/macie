@@ -1,0 +1,13 @@
+/* pages/common/store.wxss */
+
+.store-item{
+  padding: 4vw;
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.store-item view {
+  margin: 2vw;
+}
+

@@ -1,0 +1,55 @@
+/* pages/moi/login.wxss */
+.contain{
+  width: 100vw;
+}
+.singup{
+  text-align: center;
+  margin-top: 8vh;
+}
+.login-view{
+  margin-top: 10vh;
+  padding: 20px;
+}
+
+
+.login-view-title{
+  text-align: center;
+  font-size: 7vw;
+}
+
+.forgot{
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.form-view{
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  display: flex;
+  padding: 3px;
+}
+.form-view text{
+  width: 20vw;
+}
+
+.form-view input{
+  width: 65vw;
+}
+.login-form{
+  width: 100%;
+}
+.login-form button{
+  width: 100%;
+  background:#E6007D;
+  color: white;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.button-groups{
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/activity/index",
+    "pages/search/index",
+    "pages/category/index",
+    "pages/car/index",
+    "pages/moi/index",
+    "pages/moi/login",
+    "pages/moi/forgot",
+    "pages/goods/detail",
+    "pages/moi/singup",
+    "pages/favorite/index",
+    "pages/brand/index",
+    "pages/moi/likes",
+    "pages/common/index",
+    "pages/common/about",
+    "pages/common/store",
+    "pages/car/order",
+    "pages/order/index",
+    "pages/car/pay",
+    "pages/address/index",
+    "pages/address/create",
+    "pages/moi/bind",
+    "pages/moi/password"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E6007D",
+    "navigationBarTitleText": "法国方正药妆 Groupe Carré Opera",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#E6007D",
+    "color": "#555555",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "res/tabbar/home.png",
+        "selectedIconPath": "res/tabbar/home_select.png"
+      },
+      {
+        "text": "品牌",
+        "pagePath": "pages/brand/index",
+        "iconPath": "res/tabbar/category.png",
+        "selectedIconPath": "res/tabbar/category_select.png"
+      },
+      {
+        "text": "购物袋",
+        "pagePath": "pages/car/index",
+        "iconPath": "res/tabbar/sac.png",
+        "selectedIconPath": "res/tabbar/sac_select.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/moi/index",
+        "iconPath": "res/tabbar/user.png",
+        "selectedIconPath": "res/tabbar/user_select.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,19 @@
+
+action-sheet-item{
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-sheet-item{
+  width: 40vw;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.action-sheet-item image{
+  width: 5vw;
+  height: 5vw;
+  margin-right: 5vw;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "payMethod": "/pages/car/pay"
+  },
+  "navigationBarTitleText": "订单详情"
+}

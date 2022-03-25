@@ -1,0 +1,63 @@
+<!--pages/car/index.wxml-->
+<view>
+  <view class="top-bar">
+    <block wx:if="{{user}}">
+      <view class="login">
+        <image src="/res/common/location.png"></image>
+        <text>hi , {{user.username}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="login" bindtap="login">
+        <image src="/res/common/location.png"></image>
+        <text>请先登陆</text>
+      </view>
+    </block>
+    <view class="edit" bindtap="edit">编辑商品</view>
+  </view>
+  <view class="items">
+    <block wx:if="{{goods.length>0}}">
+      <block wx:for="{{goods}}" wx:key="*this" wx:for-item="good">
+        <view class="good-item">
+          <view class="good-item-cover">
+            <image src="{{good.item.cover}}"></image>
+          </view>
+          <view class="good-item-detail" bindtap="goodsDetail" data-id="{{good.item.id}}">
+            <view class="good-item-title">
+              {{good.item.name}}
+            </view>
+            <view>总数：{{good.item.total}}</view>
+            <view>规格：{{good.item.type}}</view>
+            <view>型号：{{good.item.no}}</view>
+            <view class="before-price">价格：<text>{{good.item.price}} EURO</text></view>
+            <view class="price">优惠价：<text>{{good.item.dprice}} EURO</text></view>
+           
+            <block wx:if="{{isedit}}">
+              <view class="good-item-bottom">
+                <view bindtap="mins" data-id="{{good.item.id}}"><image src="/res/common/mins.png" /></view>
+                <view>{{good.count}}</view>
+                <view bindtap="plus" data-id="{{good.item.id}}"><image src="/res/common/plus.png"  /></view>
+                <view class="car-shop" bindtap="trash" data-id="{{good.item.id}}">
+                  <image src="/res/common/trash.png"></image>
+                </view>
+              </view>
+            </block>
+            <block wx:else>
+              <view>总数：{{good.count}}</view>
+            </block>
+           
+          </view>
+        </view>
+      </block>
+      <view class="total">总金额：<text>{{prices}} EURO</text></view>
+      <view class="query" bindtap="order">
+        <button style="width:80vw;">确认</button>
+      </view>
+    </block>
+     <block  wx:else>
+      <view class="empty">
+        <image src="/res/common/empty.png"></image>
+      </view>
+    </block>
+  </view>
+</view>

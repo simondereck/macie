@@ -1,0 +1,44 @@
+<!--pages/brand/index.wxml-->
+<view>
+  <block wx:if="{{brands}}">
+    <scroll-view scroll-x="true" class="brand-category">
+      <block wx:for="{{brands}}" wx:key="*this" wx:for-item="brand">
+        <block wx:if="{{selectBrand===brand.id}}">
+          <view class="select-brand" bindtap="selectGoods" data-id="{{brand.id}}">{{brand.name}}</view>
+        </block>
+        <block wx:else>
+          <view class="brand" bindtap="selectGoods" data-id="{{brand.id}}">{{brand.name}}</view>
+        </block>
+      </block>
+    </scroll-view>
+  </block>
+  <block wx:if="{{goods}}" >
+    <scroll-view scroll-y="true" class="brand-goods">
+      <block wx:for="{{goods}}" wx:for-item="good">
+        <view class="good-item">
+            <view class="good-item-cover">
+              <image src="{{good.cover}}"></image>
+            </view>
+            <view class="good-item-detail" bindtap="goodsDetail" data-id="{{good.id}}">
+              <view class="good-item-title">
+                {{good.name}}
+              </view>
+              <view>总数：{{good.total}}</view>
+              <view class="before-price">价格：<text>{{good.price}} EURO</text></view>
+              <view class="price">优惠价：<text>{{good.dprice}} EURO</text></view>
+              <view class="good-item-bottom">
+                <view class="car-shop">
+                  <image src="/res/common/gris.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+      </block>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <view class="no-data">
+      <image src="/res/common/nodata.png"></image>
+    </view>
+  </block>
+</view>

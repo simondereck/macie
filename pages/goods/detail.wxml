@@ -1,0 +1,50 @@
+<!--pages/category/detail.wxml-->
+<scroll-view scroll-y="true">
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{good.images}}" wx:key="*this" wx:for-item="item">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFit" class="slide-image" width="100%" bindtap="" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+  <view class="info">
+    <view class="name">{{good.name}}</view>
+    <view class="share">
+      <image src="/res/common/share.png"></image>
+    </view>
+  </view>
+  <view class="base-info">
+    <view>规格：{{good.type}}</view>
+    <view>型号：{{good.no}}</view>
+  </view>
+  <view class="price">
+    <view>价格：<text>{{good.price}}</text> EURO</view> 
+  </view>
+  <view class="price">
+    <view>优惠价格：<text>{{good.dprice}}</text> EURO</view> 
+  </view>
+  <view class="description">
+    <view>{{good.description}}</view>
+  </view>
+  <view class="bottom">
+    <view class="bottom-number">
+      <image src="/res/common/mins.png" bindtap="mins"></image>
+      <view class="number">{{number}}</view>
+      <image src="/res/common/plus.png" bindtap="add"></image>
+    </view>
+    <block wx:if="{{islike}}">
+      <view class="like" bindtap="dislike"><image src="/res/common/add_fa_grey_red.png"></image></view>
+    </block>
+    <block wx:else>
+      <view class="like" bindtap="like"><image src="/res/common/add_fa_grey.png"></image></view>
+    </block>
+    <view class="car" bindtap="car">放入购物篮</view>
+  </view>
+</scroll-view>
+<view class="shopping" bindtap="buy">
+  <button style="width:100%;height:80px;">立即购买</button>
+</view>

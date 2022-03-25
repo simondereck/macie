@@ -1,0 +1,41 @@
+<!--pages/category/index.wxml-->
+<view>
+  <view class="top-bar">
+    <view class="top-bar-item" data-id="0" bindtap="order">综合</view>
+    <view class="top-bar-item" data-id="1" bindtap="order">销量</view>
+    <view class="top-bar-item" data-id="2" bindtap="order">价格</view>
+    <view class="top-bar-item" data-id="3" bindtap="order">最新</view>
+  </view>
+  <view class="goods">
+    <block wx:if="{{goods&&goods.length>0}}">
+      <block wx:for="{{goods}}" wx:key="*this" wx:for-item="good">
+        <view class="goods-item" bindtap="detail" data-id="{{good.id}}">
+          <view class="goods-item-image">
+            <image src="{{good.cover}}"></image>
+          </view>
+          <view class="goods-item-info">
+            <view class="good-item-title">
+              <view>{{good.name}}</view>
+            </view>
+            <view>规格：{{good.type}} / 型号：{{good.no}}</view>
+            <view>总数：{{good.total}}</view>
+            <view class="before-price">价格：<text>{{good.price}} EURO</text></view>
+            <view class="price">优惠价格：<text>{{good.dprice}} EURO</text></view>
+            <view class="good-item-bottom">
+              <view class="car-shop">
+                <image src="/res/common/gris.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <view class="no-data">
+      <image src="/res/common/nodata.png"></image>
+    </view>
+  </block>
+  </view>
+</view>
+
+

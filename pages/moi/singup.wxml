@@ -1,0 +1,30 @@
+<!--pages/moi/singup.wxml-->
+<view class="singup-form">
+  <view class="singup-title">注册</view>
+  <form bindsubmit="singup">
+   <view class="form-group">
+      <view class="form-group-title">用户名：</view>
+      <input name="username"/>
+    </view>
+    <view class="form-group">
+      <view class="form-group-title">邮箱：</view>
+      <input name="email"/>
+    </view>
+    <view class="form-group">
+      <view class="form-group-title">电话号码：</view>
+      <input name="telephone"/>
+    </view>
+    <view class="form-group">
+      <view class="form-group-title">设置密码：</view>
+      <input name="password" password='true'/>
+    </view>
+    <view class="form-group">
+      <view class="form-group-title">确认密码：</view>
+      <input name="repassword" password='true'/>
+    </view>
+    <view class="button-group">
+      <button form-type="submit" style="width:100%;">注  册</button>
+    </view>
+  </form>
+  
+</view>

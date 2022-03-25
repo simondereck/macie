@@ -1,0 +1,15 @@
+<!--pages/moi/forgot.wxml-->
+<view>
+  <form bindsubmit="forgot">
+    <view class="forgot-view">
+      <view class="forgot-view-title">找回密码</view>
+      <view class="form-view">
+        <view>邮箱：</view>
+        <input name="email"></input>
+      </view>
+      <view class="forgot-form">
+        <button class="forgot" style="width:100%;" form-type="submit">确认</button>
+      </view>
+    </view>
+  </form>
+</view>

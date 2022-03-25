@@ -1,0 +1,103 @@
+/* pages/car/order.wxss */
+
+.order{
+  width: 100vw;
+  height: 92vh;
+  background: #f5f5f5;
+}
+
+.orid{
+  background-color: white;
+  padding: 4vw;
+  font-size: 4vw;
+}
+
+.lists{
+  background: #f5f5f5;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.item{
+  display: flex;
+  padding: 2vw;
+  margin: 2vw;
+  background: white;
+}
+
+.item-cover{
+  width: 40vw;
+  height: 40vw;
+}
+
+.item-cover image{
+  width: 40vw;
+  height: 40vw;
+}
+
+.item-body{
+  padding: 2vw;
+}
+
+.price{
+  padding: 2vw;
+  background: white;
+  text-align: right;
+}
+
+.bottom-bar{
+  position: absolute;
+  bottom: 0;
+  background: white;
+}
+
+.button-groups{
+  display: flex;
+}
+.delete{
+  width: 50vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  background:#f5f5f5;
+  text-align: center;
+}
+
+.pay{
+  width: 50vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  background: #E6007D;
+  color: white;
+  text-align: center;
+}
+
+.bottom{
+  width: 100vw;
+  height: 8vh;
+}
+
+.address{
+  /* width: 96vw; */
+  background:#f5f5f5;
+  margin-top: 2vw;
+
+}
+.address-detail{
+  background: white;
+  padding: 2vw;
+  margin-top: 4vw;
+}
+.address-detail .edit{
+  color: #E6007D;
+}
+.address-detail .address-edit{
+  display: flex;
+  justify-content:space-between;
+}
+.address-edit,.address-title{
+  padding: 2vw;
+}
+
+.address-edit button{
+  color: #E6007D;
+}

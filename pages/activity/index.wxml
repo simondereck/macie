@@ -1,0 +1,42 @@
+<!--pages/goods/index.wxml-->
+<view>
+  <view class="activity-detail">
+    <block wx:if="{{activity}}">
+      <view class="activity-image">
+        <image src="{{activity.cover}}" mode="ascpitfi"></image>
+      </view>
+      <view class="activity-title">
+        {{activity.name}}
+      </view>
+      <view class="activity-description">
+        {{activity.description}}
+      </view>
+    </block>
+  </view>
+  <view class="goods">
+    <block wx:if="{{goods}}">
+      <block wx:for="{{goods}}" wx:key="*this" wx:for-item="good">
+        <view class="goods-item" bindtap="detail" data-id="{{good.id}}">
+          <view class="goods-item-image">
+            <image src="{{good.cover}}"></image>
+          </view>
+          <view class="goods-item-info">
+            <view class="good-item-title">
+              <view>{{good.name}}</view>
+            </view>
+            <view>规格：{{good.type}} / 型号：{{good.no}}</view>
+            <view>总数：{{good.total}}</view>
+            <view class="before-price">价格：<text>{{good.price}} EURO</text></view>
+            <view class="price">优惠价格：<text>{{good.dprice}} EURO</text></view>
+            <view class="good-item-bottom">
+              <view class="car-shop">
+                <image src="/res/common/gris.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+   
+</view>

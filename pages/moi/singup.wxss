@@ -1,0 +1,38 @@
+/* pages/moi/singup.wxss */
+.singup-form{
+  padding: 10vw;
+
+}
+.singup-title{
+  text-align: center;
+  font-size: 7vw;
+  margin: 10vw auto 7vw;
+}
+
+.form-group{
+  display: flex;
+  border-bottom: 1px solid black;
+  margin: 4vw auto 4vw;
+  padding-bottom: 2vw;
+}
+
+.form-group-title{
+  width: 23vw;
+  color: gray;
+}
+
+.form-group input{
+  width: 60vw;
+}
+.button-group{
+  margin-top: 10vw;
+}
+.button-group button{
+  background:#E6007D;
+  color: white;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 2vw;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+<!--pages/address/create.wxml-->
+<!-- * @property string $address
+ * @property string $ville
+ * @property int $country
+ * @property string $postcode
+ * @property int $default -->
+<view class="contain">
+  <view class="address-title">请用英文或法语填写地址</view>
+  <view class="address-from">
+    <form bindsubmit="createAddress">
+      <view class="address-item"><input placeholder="地址" name="address"></input></view>
+      <view class="address-item"><input placeholder="城市" name="ville"></input></view>
+      <view class="address-item"><input placeholder="国家" name="country"></input></view>
+      <view class="address-item"><input placeholder="邮编" name="postcode"></input></view>
+      <view class="address-item check">
+        <checkbox name="isdefault" checked="{{default}}" bindtap="defaultAddress">设置为默认地址</checkbox>
+      </view>
+      <view class="address-item"><button form-type="submit">提交</button></view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+   <action-sheet-item bindtap="listenerOptionChange" data-type="1">
+      <view class='action-sheet-item'>
+        <image src='/res/logo/wechat.png'></image>
+        <view>微信支付</view>
+      </view>
+   </action-sheet-item>
+   <action-sheet-item bindtap="listenerOptionChange" data-type="2">
+      <view class='action-sheet-item'>
+        <image src="/res/logo/ali.png"></image>
+        <view>AliPay</view>
+      </view>
+   </action-sheet-item>
+   <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

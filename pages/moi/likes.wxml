@@ -1,0 +1,32 @@
+<!--pages/moi/likes.wxml-->
+<view>
+  <block wx:if="{{likes}}">
+    <block wx:for="{{likes}}" wx:for-item="good" wx:key="*this">
+      <scroll-view scroll-y="true" class="brand-goods">
+        <view class="good-item">
+          <view class="good-item-cover">
+            <image src="{{good.cover}}"></image>
+          </view>
+          <view class="good-item-detail" bindtap="goodsDetail" data-id="{{good.id}}">
+            <view class="good-item-title">
+              {{good.name}}
+            </view>
+            <view>总数：{{good.total}}</view>
+            <view class="before-price">价格：<text>{{good.price}} EURO</text></view>
+            <view class="price">优惠价：<text>{{good.dprice}} EURO</text></view>
+            <view class="good-item-bottom">
+              <view class="car-shop">
+                <image src="/res/common/gris.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <image src="/res/common/empty.png"></image>
+    </view>
+  </block>
+</view>
